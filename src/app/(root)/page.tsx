@@ -1,28 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ImageIcon, User } from "lucide-react";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <nav className="h-[80px] bg-white px-10 flex items-center justify-between">
-        <div aria-label="logo" className="w-20">
-          <h1 className="font-black text-4xl">TEUAS</h1>
-        </div>
-        <div aria-label="nav-container" className="flex gap-4 text-gray-400">
-          <span className="text-orange-600 opacity-100">Home</span>
-          <span>Database Alumnni</span>
-          <span>Prestasi Mahasiswa</span>
-          <span>Loker</span>
-          <span>E-Learning</span>
-        </div>
-        <div aria-label="login" className="w-20">
-          <button className="bg-orange-600 px-6 py-2 rounded text-white font-medium">
-            Login
-          </button>
-        </div>
-      </nav>
-
       <section aria-label="hero-section" className="bg-black px-10">
         <div className="h-[800px] grid grid-cols-2 text-white place-items-center">
           <div className="space-y-5 max-w-[650px]">
@@ -121,7 +102,7 @@ export default function Home() {
         aria-label="news-section"
         className="px-10 bg-emerald-900 rounded-t-4xl"
       >
-        <div className="h-[900px] py-10 space-y-10">
+        <div className="h-fit py-10 space-y-10">
           <div className="flex justify-between">
             <h1 className="text-6xl font-bold tracking-wide leading-[72px] text-white">
               Berita & Kegiatan
@@ -135,7 +116,7 @@ export default function Home() {
               {[1, 2, 3, 4, 5].map((item) => (
                 <div
                   key={item}
-                  className="bg-gray-400 h-[600px] w-[500px] rounded-2xl flex items-center justify-center"
+                  className="bg-gray-400 h-[500px] w-[400px] rounded-2xl flex items-center justify-center"
                 >
                   <ImageIcon className="h-32 w-32 text-white" />
                 </div>
@@ -144,28 +125,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="px-10 bg-neutral-800">
-        <div className="h-[400px] py-10 text-white">
-          <div className="grid grid-cols-3">
-            <div className="bg-gray-400 h-[200px] w-[200px] rounded-2xl flex items-center justify-center">
-              <ImageIcon className="h-16 w-16" />
-            </div>
-            <div>
-              <h3>Navigation</h3>
-              <p>nav</p>
-              <p>nav</p>
-              <p>nav</p>
-            </div>
-            <div>
-              <h3>Address</h3>
-              <p>nav</p>
-              <p>nav</p>
-              <p>nav</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
